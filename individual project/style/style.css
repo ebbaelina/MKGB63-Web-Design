@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+@import url("https://use.typekit.net/tsf6hzk.css");
+@import url("https://use.typekit.net/tsf6hzk.css");
+
+/*Definierar font för alla headings samt för navbar länkar */
+h1,
+h2,
+h3,
+h4,
+h5,
+a {
+  font-family: "bebas-neue-pro", sans-serif;
+}
+
+/*Bakgrund satt till svart för att footer ska bli svart*/
+body {
+  width: 100%;
+  background-color: black;
+}
+
+/*Definierar font för alla p taggar*/
+p
+ {
+  font-family: 'Libre Caslon Text', serif;
+}
+
+/*Style för alla sectioner. Vill ha en "vit kant på insidan(padding) men vill att section elementet går hela vägen ut till kanterna i bodyn"*/
+#section2,
+#section3,
+#section4,
+#section5 {
+  margin: 0px;
+  background-color: white;
+  padding: 10px;
+}
+
+/*Kod för animation tagen från föreläsning MKGB63*/
+.anim {
+  position: relative;
+  transition: all 500ms ease-out;
+}
+
+.anim-from-bottom {
+  opacity: 0;
+  transform: translateY(20px); /* Change 20px to whatever distance you want the element to move */
+}
+
+.activated .anim-from-bottom {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*NAVBAR*/
+/*Position fixed för att navbaren alltid ska synas på sidan, även vid scroll. 
+Den ska täcka hela bredden (width) av sidan. z-index 100 för att den ska vara synlig över alla element*/
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 100;
+
+}
+
+.nav-link {
+  font-size: 20px;
+}
+/*Flyttar länkar och brand icon åt höger*/
+.navbar-nav {
+  margin-left: 60px;
+}
+
+.navbar-brand {
+  margin-left: 10px;
+}
+/*END OF NAVBAR*/
+
+/*HERO*/
+/*Fotot ska täcka hela bredden och innehåller centererat.
+Sätter även en annan font specifikt för hero sectionen som ska vara vit*/
+.hero {
+  background-image: url(../images/vinylStore.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#herotext {
+  color: white;
+  font-size: 70px;
+  font-family: "eight", sans-serif !important;
+}
+
+/*END OF HERO*/
+
+/*ABOUT US*/
+/*Centrerad  bild som täcker hela viden av elementent. 
+satte en bestämt höjd då jag tyckte det passade bildens storlek på ett bra sätt
+samt att det passade text areans storlek*/
+.col-img {
+  background-image: url(../images/billieHoliday.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 550px;
+}
+/*END OF ABOUT US */
+
+/*ALBUMS*/
+/*Satten en höjd även på dessa bilder för att det passade bildens storlek och bredd.*/
+.albumimg {
+  max-height: 350px;
+  width: 100%;
+}
+
+/*Position: relative satt till parent elementent som påverkar positionen av .albumcontent elementet,
+ser till att .albumcontent elementent är placerat i botten av dess parent element .albums, 
+pågrund av att bottom: 0 är tilldelad den */
+.albums {
+  position: relative;
+}
+
+.albumContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.77);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 10px;
+}
+
+.albumContent h4 {
+  color: #fff;
+}
+
+/*När användare hovrar över .albums elementet så kommer .albumContent elementet bli synligt pågrund av opacity: 1*/
+.albums:hover .albumContent {
+  opacity: 1;
+}
+/*END OF ALBUMS*/
+
+/*PRICING*/
+/*mb-5 får en ny margin-bottom, important för att classen redan har en margin som måste skrivas över*/
+.mb-5 {
+  margin-bottom: 5px !important;
+}
+
+.card-body {
+  min-height: 350px;
+  border: 1px solid black;
+  padding: 0px;
+  padding-bottom: 10px;
+  align-items: center;
+}
+
+/*Sätter lite margin för att elementen ska ha lite avstånd när dom placeras över varandra på mindre skärmar*/
+.card {
+  margin-bottom: 10px;
+}
+
+/*Sätter card till flexbox med column direction för att elementen ska hamna på varandra istället för brevid varandra*/
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+a.btn {
+  margin-top: auto;
+}
+
+/*ändrar bredden på knapparna*/
+.subBtn {
+  width: 60%;
+}
+
+.card-title {
+  background-color: orange;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+/*END OF PRICING*/
+
+/*SUBSCRIBE*/
+/*Lägger avstånd mellan knappen och input elementen*/
+#registerButton {
+  margin-top: 20px;
+}
+
+/*Bilden ska täcka hela viden av elementent och vara centrerad. 
+att en bestämd höjd för jag tyckte av det passade bildens storlek och bredd*/
+.subscribeImg {
+  background-image: url(../images/subscribe.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 500px;
+}
+/*END OF SUBSCRIBE*/
+
+/*FOOTER*/
+/*Bootstrap iconerna får en border som är rund*/
+.btn-floating {
+  border-radius: 50%;
+}
+/*skapar mellanrum mellan iconerna och form elementet*/
+.form {
+  margin-top: 15px;
+}
+/*END OF FOOTER*/
